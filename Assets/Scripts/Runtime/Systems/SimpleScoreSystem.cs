@@ -8,14 +8,13 @@ namespace Cosmos.Systems
     {
         private readonly IConfigurationSystem configurationSystem;
         private readonly SignalBus signalBus;
+        private int score = 0;
 
         public SimpleScoreSystem(IConfigurationSystem configurationSystem, SignalBus signalBus)
         {
             this.signalBus = signalBus;
             this.configurationSystem = configurationSystem;
         }
-
-        private int score = 0;
 
         public int GetScore()
         {
@@ -24,7 +23,7 @@ namespace Cosmos.Systems
 
         public void UpdateScore(string typeId)
         {
-            this.score += configurationSystem.GetData<AsteroidData>(typeId).Points;
+            score += configurationSystem.GetData<AsteroidData>(typeId).Points;
             signalBus.Fire(new ScoreChangedSignal(score));
         }
     }
