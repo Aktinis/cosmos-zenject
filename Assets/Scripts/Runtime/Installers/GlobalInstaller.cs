@@ -7,8 +7,9 @@ namespace Cosmos.Installer
     {
         public override void InstallBindings()
         {
-            Container.Bind<IAssetSystem>().To<ResourceSystem>().AsSingle();
+            Container.Bind<IAssetSystem>().To<AddressableAssetManager>().AsSingle();
             Container.Bind<IConfigurationSystem>().To<SimpleConfigurationSystem>().AsSingle();
+            Container.Bind<ISceneManagingSystem>().To<CosmosSceneManagingSystem>().AsSingle();
         }
     }
 }

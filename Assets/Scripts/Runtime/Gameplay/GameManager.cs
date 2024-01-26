@@ -14,19 +14,22 @@ namespace Cosmos.Gameplay
         private const float DELAY_EXIT_TIME = 3f;
 
         private readonly IConfigurationSystem configurationSystem;
+        private readonly ISceneManagingSystem sceneManagingSystem;
         private readonly PlayerController playerController =null;
         private readonly LevelManager levelManager = null;
         private readonly Ship.Factory shipFactory = null;
         private readonly SignalBus signalBus = null;
         private float delayStartTime;
 
-        public GameManager(PlayerController playerController, Ship.Factory shipFactory, LevelManager levelManager, IConfigurationSystem configurationSystem, SignalBus signalBus)
+        public GameManager(PlayerController playerController, Ship.Factory shipFactory, LevelManager levelManager,
+            IConfigurationSystem configurationSystem, SignalBus signalBus, ISceneManagingSystem sceneManagingSystem)
         {
             this.signalBus = signalBus;
             this.shipFactory = shipFactory;
             this.playerController = playerController;
             this.levelManager = levelManager;
             this.configurationSystem = configurationSystem;
+            this.sceneManagingSystem = sceneManagingSystem;
         }
 
         public void Initialize()
@@ -50,7 +53,7 @@ namespace Cosmos.Gameplay
                 {
                     levelManager.End();
                     Debug.Log("Game has ended!");
-                    SceneManager.LoadScene("Menu");
+                    sceneManagingSystem.LoadSceneAsync("Menu");
                 }
                 delayStartTime += Time.deltaTime;
             }
