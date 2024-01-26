@@ -4,7 +4,7 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public class InvincibilityHandler : ITickable
+    internal sealed class InvincibilityHandler : ITickable
     {
         private const float INVINCIBILITY_TIMER = 3f;
         public float startTime = 0f;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Cosmos.Gameplay.Settings
 {
-    public readonly struct BulletSettings
+    internal readonly struct BulletSettings
     {
         public int SenderId { get; }
         public BulletData Data { get; }

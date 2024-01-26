@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Cosmos.UI
 {
-    public sealed class HudView : View
+    internal sealed class HudView : View
     {
         private const string LIVES_TEXT = "Lives left";
 

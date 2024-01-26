@@ -1,6 +1,6 @@
 ﻿namespace Cosmos.Gameplay.Providers
 {
-    public interface IInvincibilityProvider
+    internal interface IInvincibilityProvider
     {
         public void ToggleInvincibility(bool state);
 

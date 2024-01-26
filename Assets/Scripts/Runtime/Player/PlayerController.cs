@@ -7,7 +7,7 @@ using Zenject;
 
 namespace Cosmos.Player
 {
-    public class PlayerController : IPositionProvider, IRotationProvider, ITickable, IInvincibilityProvider
+    internal sealed class PlayerController : IPositionProvider, IRotationProvider, ITickable, IInvincibilityProvider
     {
         private readonly BoundsHandler boundsHandler = null;
         private readonly InvincibilityHandler invincibilityHandler = null;

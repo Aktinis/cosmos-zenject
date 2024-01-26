@@ -1,6 +1,6 @@
 ﻿namespace Cosmos.Signals
 {
-    public readonly struct PlayerHealthChangedSignal
+    internal readonly struct PlayerHealthChangedSignal
     {
         public int PlayerHealth { get; }
         public PlayerHealthChangedSignal(int playerHealth)

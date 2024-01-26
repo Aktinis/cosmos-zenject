@@ -8,7 +8,7 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public sealed class Ship : MonoBehaviour, IPawn, IHealthProvider, IDamageProvider
+    internal sealed class Ship : MonoBehaviour, IPawn, IHealthProvider, IDamageProvider
     {
         [SerializeField] private Rigidbody2D rigidbody2d;
 

@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Cosmos.Configurations
 {
     [CreateAssetMenu(fileName = nameof(ShipConfiguration) + "_data", menuName = "Data/" + nameof(ShipConfiguration), order = 1)]
-    public sealed class ShipConfiguration : ScriptableObject, IDataModel<ShipData>
+    internal sealed class ShipConfiguration : ScriptableObject, IDataModel<ShipData>
     {
         [SerializeField] private List<ShipData> ships = new List<ShipData>();
 

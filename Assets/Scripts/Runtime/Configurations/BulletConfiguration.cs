@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Cosmos.Configurations
 {
     [CreateAssetMenu(fileName = nameof(BulletConfiguration) + "_data", menuName = "Data/" + nameof(BulletConfiguration), order = 1)]
-    public sealed class BulletConfiguration : ScriptableObject, IDataModel<BulletData>
+    internal sealed class BulletConfiguration : ScriptableObject, IDataModel<BulletData>
     {
         [SerializeField] private List<BulletData> bullets = new List<BulletData>();
 

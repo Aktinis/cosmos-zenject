@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Cosmos.Gameplay
 {
-    public sealed class BoundsHandler
+    internal sealed class BoundsHandler
     {
         private readonly LevelBounds levelBounds;
 

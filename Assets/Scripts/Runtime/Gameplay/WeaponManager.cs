@@ -7,7 +7,7 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public sealed class WeaponManager : ITickable
+    internal sealed class WeaponManager : ITickable
     {
         private readonly Bullet.Factory bulletFactory;
         private readonly BoundsHandler boundsHandler;

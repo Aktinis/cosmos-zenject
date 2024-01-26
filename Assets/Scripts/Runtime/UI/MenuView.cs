@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace Cosmos.UI
 {
 
-    public sealed class MenuView : View
+    internal sealed class MenuView : View
     {
         private const string START_GAME_TEXT = "Click anywhere to start";
         private const string CONTROLS_TEXT = "W -> Move forward\nA,D -> Rotate ship\n SPACE -> Fire\nT -> Teleport to random location";

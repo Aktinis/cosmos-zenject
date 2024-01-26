@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Cosmos.Data
 {
     [Serializable]
-    public sealed class LevelData
+    internal sealed class LevelData
     {
         [SerializeField] private string id = string.Empty;
         [SerializeField] private float nextLevelDelay = 2f;

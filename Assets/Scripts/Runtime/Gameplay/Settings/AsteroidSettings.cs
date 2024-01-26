@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Cosmos.Gameplay.Settings
 {
-    public readonly struct AsteroidSettings
+    internal readonly struct AsteroidSettings
     {
         public AsteroidData Data { get; }
         public Vector3 Position { get; }

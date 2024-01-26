@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Cosmos.Gameplay.Settings
 {
-    public readonly struct ShipSettings 
+    internal readonly struct ShipSettings 
     {
         public ShipData Data { get; }
         public Vector3 SpawnPosition { get; }

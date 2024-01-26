@@ -9,7 +9,7 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public sealed class GameManager : IInitializable, ITickable
+    internal sealed class GameManager : IInitializable, ITickable
     {
         private const float DELAY_EXIT_TIME = 3f;
 

@@ -2,7 +2,7 @@
 
 namespace Cosmos.Gameplay.Providers
 {
-    public interface IPositionProvider
+    internal interface IPositionProvider
     {
         public Vector3 Position { get; set; }
     }

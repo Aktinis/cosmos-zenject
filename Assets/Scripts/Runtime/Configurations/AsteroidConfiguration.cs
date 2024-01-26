@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Cosmos.Configurations
 {
     [CreateAssetMenu(fileName = nameof(AsteroidConfiguration) + "_data", menuName = "Data/" + nameof(AsteroidConfiguration), order = 1)]
-    public sealed class AsteroidConfiguration : ScriptableObject, IDataModel<AsteroidData>
+    internal sealed class AsteroidConfiguration : ScriptableObject, IDataModel<AsteroidData>
     {
         [SerializeField] private List<AsteroidData> asteroids = new List<AsteroidData>();
 

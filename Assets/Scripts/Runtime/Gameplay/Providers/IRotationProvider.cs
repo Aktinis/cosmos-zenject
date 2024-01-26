@@ -2,7 +2,7 @@
 
 namespace Cosmos.Gameplay.Providers
 {
-    public interface IRotationProvider
+    internal interface IRotationProvider
     {
         public Quaternion Rotation { get; set; }
     }

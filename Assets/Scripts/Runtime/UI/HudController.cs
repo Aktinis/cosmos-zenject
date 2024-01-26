@@ -3,7 +3,7 @@ using Zenject;
 
 namespace Cosmos.UI
 {
-    public sealed class HudController : UIController<HudView>
+    internal sealed class HudController : UIController<HudView>
     {
         private SignalBus signalBus = null;
 

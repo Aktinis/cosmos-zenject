@@ -2,9 +2,9 @@
 
 namespace Cosmos.Configurations
 {
-    public interface IDataModel { }
+    internal interface IDataModel { }
 
-    public interface IDataModel<T> : IDataModel
+    internal interface IDataModel<T> : IDataModel
     {
         T GetDefault();
         T GetData(string id);

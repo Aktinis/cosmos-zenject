@@ -2,7 +2,7 @@
 
 namespace Cosmos.Gameplay
 {
-    public sealed class LevelBounds
+    internal sealed class LevelBounds
     {
         private const float BOUNDS_OFFSET = .5f;
         private Vector2 boundsX = Vector2.zero;

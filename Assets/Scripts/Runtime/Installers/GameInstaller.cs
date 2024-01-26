@@ -11,7 +11,7 @@ using Zenject;
 
 namespace Cosmos.Installer
 {
-    public class GameInstaller : MonoInstaller
+    internal sealed class GameInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {

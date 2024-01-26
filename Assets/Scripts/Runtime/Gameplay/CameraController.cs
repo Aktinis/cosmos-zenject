@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Cosmos.Gameplay
 {
-    public class CameraController : MonoBehaviour
+    internal class CameraController : MonoBehaviour
     {
         [SerializeField] private Camera cam;
 

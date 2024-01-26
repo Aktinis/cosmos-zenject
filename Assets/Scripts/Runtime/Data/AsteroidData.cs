@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Cosmos.Data
 {
     [Serializable]
-    public sealed class AsteroidData
+    internal sealed class AsteroidData
     {
         [SerializeField] private float initialForce = 10.0f;
         [SerializeField] private string typeId = string.Empty;

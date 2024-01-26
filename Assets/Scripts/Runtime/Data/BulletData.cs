@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Cosmos.Data
 {
     [Serializable]
-    public sealed class BulletData
+    internal sealed class BulletData
     {
         [SerializeField] private string id = string.Empty;
         [SerializeField] private float speed = 10.0f;

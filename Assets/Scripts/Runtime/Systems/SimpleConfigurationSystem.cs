@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Cosmos.Systems
 {
-    public interface IConfigurationSystem
+    internal interface IConfigurationSystem
     {
         T GetData<T>(string id);
         T GetDefaultData<T>();
@@ -14,7 +14,7 @@ namespace Cosmos.Systems
 
     }
 
-    public sealed class SimpleConfigurationSystem : IConfigurationSystem
+    internal sealed class SimpleConfigurationSystem : IConfigurationSystem
     {
         private readonly Dictionary<Type, string> configurationPathLookUpTable = new Dictionary<Type, string>()
         {

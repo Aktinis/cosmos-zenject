@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Cosmos.Data
 {
     [Serializable]
-    public sealed class ShipData
+    internal sealed class ShipData
     {
         [SerializeField] private string id = string.Empty;
         [SerializeField] private string weaponId = string.Empty;

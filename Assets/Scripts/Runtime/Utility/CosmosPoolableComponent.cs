@@ -3,7 +3,7 @@ using Zenject;
 
 namespace Cosmos.Utility
 {
-    public class CosmosPoolableComponent : MonoBehaviour, IPoolable<IMemoryPool>
+    internal sealed class CosmosPoolableComponent : MonoBehaviour, IPoolable<IMemoryPool>
     {
         private IMemoryPool memoryPool = null;
 

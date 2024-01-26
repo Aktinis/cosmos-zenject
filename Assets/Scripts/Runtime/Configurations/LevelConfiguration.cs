@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Cosmos.Configurations
 {
     [CreateAssetMenu(fileName = nameof(LevelConfiguration)+ "_data", menuName = "Data/"+ nameof(LevelConfiguration), order = 1)]
-    public sealed class LevelConfiguration : ScriptableObject, IDataModel<LevelData>
+    internal sealed class LevelConfiguration : ScriptableObject, IDataModel<LevelData>
     {
         [SerializeField] private List<LevelData> levels = new List<LevelData>();
 

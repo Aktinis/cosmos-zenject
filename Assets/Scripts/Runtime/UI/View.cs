@@ -2,7 +2,7 @@
 
 namespace Cosmos.UI
 {
-    public abstract class View : MonoBehaviour
+    internal abstract class View : MonoBehaviour
     {
         public virtual void Initialize() { }
     }

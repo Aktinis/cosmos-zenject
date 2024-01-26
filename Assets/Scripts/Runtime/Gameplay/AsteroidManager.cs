@@ -8,7 +8,7 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public sealed class AsteroidManager : ITickable
+    internal sealed class AsteroidManager : ITickable
     {
         private readonly Asteroid.Factory factory = null;
         private readonly BoundsHandler boundsHandler = null;

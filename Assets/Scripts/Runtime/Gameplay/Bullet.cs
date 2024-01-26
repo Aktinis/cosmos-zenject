@@ -7,7 +7,7 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public sealed class Bullet : MonoBehaviour, IPositionProvider, IPoolable<BulletSettings, IMemoryPool>
+    internal sealed class Bullet : MonoBehaviour, IPositionProvider, IPoolable<BulletSettings, IMemoryPool>
     {
         private IMemoryPool memoryPool;
         private BulletData data = null;

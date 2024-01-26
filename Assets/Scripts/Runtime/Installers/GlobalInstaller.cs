@@ -3,7 +3,7 @@ using Zenject;
 
 namespace Cosmos.Installer
 {
-    public class GlobalInstaller : MonoInstaller<GlobalInstaller>
+    internal sealed class GlobalInstaller : MonoInstaller<GlobalInstaller>
     {
         public override void InstallBindings()
         {

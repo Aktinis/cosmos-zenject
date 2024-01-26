@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public class LevelManager : ITickable
+    internal sealed class LevelManager : ITickable
     {
         private readonly AsteroidManager asteroidManager = null;
         private readonly LevelData levelData = null;

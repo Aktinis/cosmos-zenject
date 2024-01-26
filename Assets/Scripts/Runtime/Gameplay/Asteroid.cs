@@ -8,7 +8,7 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public sealed class Asteroid : MonoBehaviour, IPositionProvider, IDamageProvider, IPoolable<AsteroidSettings, IMemoryPool>
+    internal sealed class Asteroid : MonoBehaviour, IPositionProvider, IDamageProvider, IPoolable<AsteroidSettings, IMemoryPool>
     {
         [SerializeField] private Rigidbody2D rigidbody2d;
 

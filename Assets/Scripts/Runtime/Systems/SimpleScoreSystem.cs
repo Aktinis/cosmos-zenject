@@ -4,13 +4,13 @@ using Zenject;
 
 namespace Cosmos.Systems
 {
-    public interface IScoreSystem
+    internal interface IScoreSystem
     {
         public void UpdateScore(string typeId);
         public int GetScore();
     }
 
-    public sealed class SimpleScoreSystem : IScoreSystem
+    internal sealed class SimpleScoreSystem : IScoreSystem
     {
         private readonly IConfigurationSystem configurationSystem;
         private readonly SignalBus signalBus;

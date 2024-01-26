@@ -1,6 +1,6 @@
 ﻿namespace Cosmos.Gameplay.Providers
 {
-    public interface IHealthProvider
+    internal interface IHealthProvider
     {
         public bool IsAlive { get; }
         public int Health { get; }

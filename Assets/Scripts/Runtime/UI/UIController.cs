@@ -2,7 +2,7 @@
 
 namespace Cosmos.UI
 {
-    public abstract class UIController<TView> : MonoBehaviour where TView : View 
+    internal abstract class UIController<TView> : MonoBehaviour where TView : View 
     {
         protected TView view;
         protected virtual void Awake()
