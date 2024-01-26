@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc34275d31f52e42b8626e67b897055, type: 3}
+  m_Name: AsteroidDefaultConfiguration
+  m_EditorClassIdentifier: 
+  asteroids:
+  - initialForce: 60
+    typeId: asteroid_small
+    points: 100
+    breakCount: 0
+    breakTypeId: 
+  - initialForce: 30
+    typeId: asteroid_medium
+    points: 50
+    breakCount: 2
+    breakTypeId: asteroid_small
+  - initialForce: 15
+    typeId: asteroid_big
+    points: 20
+    breakCount: 4
+    breakTypeId: asteroid_medium
