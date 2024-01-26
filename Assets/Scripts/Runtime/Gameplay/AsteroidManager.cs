@@ -41,15 +41,6 @@ namespace Cosmos.Gameplay
             asteroids.Add(factory.Create(settings));
         }
 
-        private void BreakAsteroid(Vector3 position, string typeId)
-        {
-            var data = configurationSystem.GetData<AsteroidData>(typeId);
-            for (int i = 0; i < data.BreakCount; i++)
-            {
-                SpawnAsteroid(position, data.BreakTypeId);
-            }
-        }
-
         public void Tick()
         {
             if (asteroids.Count > 0)
@@ -58,6 +49,15 @@ namespace Cosmos.Gameplay
                 {
                     boundsHandler.UpdatePosition(item);
                 }
+            }
+        }
+
+        private void BreakAsteroid(Vector3 position, string typeId)
+        {
+            var data = configurationSystem.GetData<AsteroidData>(typeId);
+            for (int i = 0; i < data.BreakCount; i++)
+            {
+                SpawnAsteroid(position, data.BreakTypeId);
             }
         }
     }
