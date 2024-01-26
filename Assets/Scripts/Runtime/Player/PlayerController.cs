@@ -1,13 +1,13 @@
-using Cosmos.Components;
 using Cosmos.Data;
 using Cosmos.Gameplay;
+using Cosmos.Gameplay.Providers;
 using Cosmos.Signals;
 using UnityEngine;
 using Zenject;
 
 namespace Cosmos.Player
 {
-    public class PlayerController : IMove, IRotate, ITickable, IInvincibility
+    public class PlayerController : IPositionProvider, IRotationProvider, ITickable, IInvincibilityProvider
     {
         private readonly BoundsHandler boundsHandler = null;
         private readonly InvincibilityHandler invincibilityHandler = null;
@@ -15,7 +15,7 @@ namespace Cosmos.Player
         private readonly SignalBus signalBus = null;
 
         private IPawn pawn = null;
-        private IHealth healthRef = null;
+        private IHealthProvider healthRef = null;
         private bool hasPawn = false;
         private bool hasWeapon = false;
         private float fireTime = 0f;
@@ -71,13 +71,13 @@ namespace Cosmos.Player
         public void Possess(IPawn pawn)
         {
             this.pawn = pawn;
-            if (pawn is IHealth health)
+            if (pawn is IHealthProvider health)
             {
                 healthRef = health;
             }
-            if(pawn is IDamage damage)
+            if(pawn is IDamageProvider damage)
             {
-                ((IDamage)pawn).OnTakeDamage = OnTakeDamage;
+                ((IDamageProvider)pawn).OnTakeDamage = OnTakeDamage;
             }
             if(pawn is Transform transform)
             {

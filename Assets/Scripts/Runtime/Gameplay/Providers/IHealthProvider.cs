@@ -1,6 +1,6 @@
-﻿namespace Cosmos.Components
+﻿namespace Cosmos.Gameplay.Providers
 {
-    public interface IHealth
+    public interface IHealthProvider
     {
         public bool IsAlive { get; }
         public int Health { get; }

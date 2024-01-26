@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Cosmos.Components
+namespace Cosmos.Gameplay.Providers
 {
-    public interface IDamage
+    public interface IDamageProvider
     {
         public void TakeDamage(int damage = 0);
         public Action<int> OnTakeDamage { get; set; }

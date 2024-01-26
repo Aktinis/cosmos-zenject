@@ -1,6 +1,6 @@
-﻿namespace Cosmos.Components
+﻿namespace Cosmos.Gameplay.Providers
 {
-    public interface IPawn : IMove, IRotate
+    public interface IPawn : IPositionProvider, IRotationProvider
     {
         public void Rotate(int direction);
         public void Thrust(bool useThrust);

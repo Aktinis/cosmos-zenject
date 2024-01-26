@@ -1,5 +1,5 @@
-using Cosmos.Components;
 using Cosmos.Data;
+using Cosmos.Gameplay.Providers;
 using Cosmos.Gameplay.Settings;
 using Cosmos.Utility;
 using System;
@@ -8,7 +8,7 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public sealed class Asteroid : MonoBehaviour, IMove, IDamage, IPoolable<AsteroidSettings, IMemoryPool>
+    public sealed class Asteroid : MonoBehaviour, IPositionProvider, IDamageProvider, IPoolable<AsteroidSettings, IMemoryPool>
     {
         [SerializeField] private Rigidbody2D rigidbody2d;
 
@@ -61,7 +61,7 @@ namespace Cosmos.Gameplay
         {
             if (isSpawned)
             {
-                var component = collision.GetComponentInParent<IDamage>();
+                var component = collision.GetComponentInParent<IDamageProvider>();
                 if (component != null)
                 {
                     component.TakeDamage();

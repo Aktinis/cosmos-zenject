@@ -1,5 +1,5 @@
-using Cosmos.Components;
 using Cosmos.Data;
+using Cosmos.Gameplay.Providers;
 using Cosmos.Gameplay.Settings;
 using System;
 using UnityEngine;
@@ -7,7 +7,7 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public sealed class Bullet : MonoBehaviour, IMove, IPoolable<BulletSettings, IMemoryPool>
+    public sealed class Bullet : MonoBehaviour, IPositionProvider, IPoolable<BulletSettings, IMemoryPool>
     {
         private IMemoryPool memoryPool;
         private BulletData data = null;
@@ -58,7 +58,7 @@ namespace Cosmos.Gameplay
         {
             if (isSpawned && collision.transform.root.gameObject.GetInstanceID() != senderId)
             {
-                var component = collision.GetComponentInParent<IDamage>();
+                var component = collision.GetComponentInParent<IDamageProvider>();
                 if(component != null)
                 {
                     component.TakeDamage();

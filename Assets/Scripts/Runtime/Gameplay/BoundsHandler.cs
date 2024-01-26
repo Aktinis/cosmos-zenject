@@ -1,4 +1,4 @@
-using Cosmos.Components;
+using Cosmos.Gameplay.Providers;
 using UnityEngine;
 
 namespace Cosmos.Gameplay
@@ -12,7 +12,7 @@ namespace Cosmos.Gameplay
             this.levelBounds = levelBounds;
         }
 
-        public void UpdatePosition(IMove movable)
+        public void UpdatePosition(IPositionProvider movable)
         {
             var newPosition = movable.Position;
             if (newPosition.x < levelBounds.Left || newPosition.x > levelBounds.Right)
@@ -31,7 +31,7 @@ namespace Cosmos.Gameplay
             }
         }
         
-        public void Teleport(IMove movable)
+        public void Teleport(IPositionProvider movable)
         {
             var randomPosX = Random.Range(levelBounds.LeftOffset, levelBounds.RightOffset);
             var randomPosY = Random.Range(levelBounds.BottomOffset, levelBounds.TopOffset);

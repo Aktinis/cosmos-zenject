@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace Cosmos.Components
+namespace Cosmos.Gameplay.Providers
 {
-    public interface IMove
+    public interface IPositionProvider
     {
         public Vector3 Position { get; set; }
     }

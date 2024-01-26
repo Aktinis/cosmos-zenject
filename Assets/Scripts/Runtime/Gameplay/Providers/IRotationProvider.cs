@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace Cosmos.Components
+namespace Cosmos.Gameplay.Providers
 {
-    public interface IRotate
+    public interface IRotationProvider
     {
         public Quaternion Rotation { get; set; }
     }

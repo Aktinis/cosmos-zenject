@@ -1,4 +1,4 @@
-﻿using Cosmos.Components;
+﻿using Cosmos.Gameplay.Providers;
 using UnityEngine;
 using Zenject;
 
@@ -8,12 +8,12 @@ namespace Cosmos.Gameplay
     {
         private const float INVINCIBILITY_TIMER = 3f;
         public float startTime = 0f;
-        public IInvincibility invincibility = null;
+        public IInvincibilityProvider invincibility = null;
         private bool hasInstance = false;
 
         public InvincibilityHandler() { }
 
-        public void UpdateInvincibility(IInvincibility invincibility)
+        public void UpdateInvincibility(IInvincibilityProvider invincibility)
         {
             if(hasInstance == false)
             {
