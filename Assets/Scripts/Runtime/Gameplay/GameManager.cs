@@ -1,4 +1,5 @@
 using Cosmos.Data;
+using Cosmos.Gameplay.Settings;
 using Cosmos.Player;
 using Cosmos.Signals;
 using Cosmos.Systems;

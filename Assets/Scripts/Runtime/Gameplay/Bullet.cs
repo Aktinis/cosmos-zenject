@@ -1,31 +1,12 @@
 using Cosmos.Components;
 using Cosmos.Data;
+using Cosmos.Gameplay.Settings;
 using System;
 using UnityEngine;
 using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public readonly struct BulletSettings
-    {
-        public int SenderId { get; }
-        public BulletData Data { get; }
-        public Vector2 Direction { get; }
-        public Vector2 Position { get; }
-        public Quaternion Rotation { get; }
-        public Action<Bullet> OnExplode { get; }
-
-        public BulletSettings(int senderId, BulletData data, Vector2 direction, Vector2 position, Quaternion rotation, Action<Bullet> onExplode)
-        {
-            SenderId = senderId;
-            Rotation = rotation;
-            Position = position;
-            Data = data;
-            Direction = direction;
-            OnExplode = onExplode;
-        }
-    }
-
     public sealed class Bullet : MonoBehaviour, IMove, IPoolable<BulletSettings, IMemoryPool>
     {
         private IMemoryPool memoryPool;

@@ -1,5 +1,6 @@
 using Cosmos.Components;
 using Cosmos.Data;
+using Cosmos.Gameplay.Settings;
 using Cosmos.Utility;
 using System;
 using UnityEngine;
@@ -7,22 +8,6 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public readonly struct AsteroidSettings
-    {
-        public AsteroidData Data { get; }
-        public Vector3 Position { get; }
-        public Vector3 Rotation { get; }
-        public Action<int> OnExplode { get; }
-
-        public AsteroidSettings(AsteroidData data, Vector3 position, Vector3 rotation, Action<int> onExplode)
-        {
-            Data = data;
-            Position = position;
-            Rotation = rotation;
-            OnExplode = onExplode;
-        }
-    }
-
     public sealed class Asteroid : MonoBehaviour, IMove, IDamage, IPoolable<AsteroidSettings, IMemoryPool>
     {
         [SerializeField] private Rigidbody2D rigidbody2d;

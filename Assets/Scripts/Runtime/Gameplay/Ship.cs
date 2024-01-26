@@ -1,5 +1,6 @@
 using Cosmos.Components;
 using Cosmos.Data;
+using Cosmos.Gameplay.Settings;
 using Cosmos.Systems;
 using System;
 using UnityEngine;
@@ -7,17 +8,6 @@ using Zenject;
 
 namespace Cosmos.Gameplay
 {
-    public readonly struct ShipSettings 
-    {
-        public ShipData Data { get; }
-        public Vector3 SpawnPosition { get; }
-        public ShipSettings(Vector3 spawnPosition,  ShipData data)
-        {
-            SpawnPosition = spawnPosition;
-            Data = data;
-        }
-    }
-
     public sealed class Ship : MonoBehaviour, IPawn, IHealth, IDamage
     {
         [SerializeField] private Rigidbody2D rigidbody2d;
