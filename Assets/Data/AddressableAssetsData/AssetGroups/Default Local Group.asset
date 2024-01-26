@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 96f0908436c3a5c45819fe38015f1fa8
+  m_SerializeEntries:
+  - m_GUID: 028b48652a6d6a240bcf598036fbc7f9
+    m_Address: asteroid_big
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - asteroid
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 06cc681d6426eac4d8ac7ec9cf4efc60
+    m_Address: asteroid_medium
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - asteroid
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1fc3bd35921f11e4dbc616e62157fade
+    m_Address: asteroid_small
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - asteroid
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec0f7141cc503224b940842cebab3103
+    m_Address: ship_default
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ship
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5c22e9441ef48d0408692d584a2996ad, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c90bb8e78daead241b1a6d0cc98e79a2, type: 2}
+    - {fileID: 11400000, guid: 1f247660826ca8a428a186a27a70f099, type: 2}
